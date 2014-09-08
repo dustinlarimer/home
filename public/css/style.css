@@ -1,7 +1,7 @@
 body {
   background: #000;
   color: #fff;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a, a:focus, a:hover {
   color: #fff;
@@ -11,8 +11,60 @@ h1, h2, h3 {
   font-weight: 100;
 }
 
+form.msg input[name=message] {
+  background: #000;
+  border: 1px solid #191919;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  outline: 0 none;
+  padding: 10px;
+  text-align: right;
+  width: 100%;
+}
+::-webkit-input-placeholder { color:#333; }
+::-moz-placeholder { color:#333; }
+:-ms-input-placeholder { color:#333; }
+input:-moz-placeholder { color:#333; }
+
+
+ul.thread {
+  margin: 0;
+  padding: 32px 0;
+}
+ul.thread li {
+  border-bottom: 1px solid #282828;
+  font-weight: 100;
+  list-style: none;
+  padding: 24px 0;
+}
+
+ul.thread li > p {
+  color: #4d4d4d;
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0;
+  transition: color 0.1s, font-size 0.2s;
+  transition-timing-function: ease-in; /* cubic-bezier(0,0,0.25,1) */
+}
+
+ul.thread li > p:last-child {
+  color: #fff;
+  font-size: 40px;
+}
+
+ul.thread li.robot {
+
+}
+
+ul.thread li.guest {
+  text-align: right;
+}
+
+
+
 .container {
-  background: pink;
   margin: 0 auto;
 }
 

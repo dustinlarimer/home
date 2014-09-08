@@ -7,13 +7,14 @@ html
     .container
       if(visitor.name === 'friend')
         form(method='post')
-          input(type='text', name='remember', placeholder='What\'s your name?')
+          input(type='text', name='remember', autocomplete='off')
           input(type='submit', value='Remember me')
         hr
       h1!= 'hey there, ' + visitor.name
       a(href='./forget') forget me
-      hr
-      form(method='post')
-        input(type='text', name='message', placeholder='type...')
+      ul.thread
+      form.msg(method='post')
+        input(type='text', name='message', placeholder='say hello...', autocomplete='off')
     script(src='/socket.io/socket.io.js')
+    script(src='/lib/jquery/dist/jquery.min.js')
     script(src='/js/thread.js')

@@ -1,0 +1,21 @@
+{
+  "name": "home",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dustinlarimer/home",
+  "authors": [
+    "Dustin Larimer <dustinlarimer@gmail.com>"
+  ],
+  "description": "where the heart is",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

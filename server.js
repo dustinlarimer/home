@@ -61,7 +61,9 @@ server.listen(PORT, function(){
 io.on('connection', function (socket) {
 
   socket.emit('message:robot', { msg: 'Hi, I\'m a robot!' });
-  socket.on('message:guest', function (data) {
+  socket.on('message:guest', function (data, fn) {
+    if (fn) fn(data);
+    //socket.emit('message:robot', { msg: 'oh, that is quite wonderful' });
     console.log(data);
   });
 
