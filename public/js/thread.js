@@ -4,6 +4,13 @@ $(function(){
     , input = $("form.msg input[type=text]")
     , thread = $("ul.thread");
 
+  window.onresize = resize;
+  function resize(){
+    $(".window-wrapper").height((window.innerHeight-75) + "px");
+    // window.innerHeight;
+  }
+  resize();
+
   input.focus();
 
   form.on("submit", function(e){
